@@ -1,0 +1,11 @@
+/**
+* Site menu
+*/
+.menu {
+    background: #fff;
+    padding: 20px;
+}
+.menu a {
+    display: inline-block;
+    margin-right: 2em;
+}

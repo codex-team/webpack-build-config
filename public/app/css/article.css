@@ -1,0 +1,13 @@
+/**
+* Article page
+*/
+.article {
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: 18px;
+    line-height: 1.5e;
+}
+.article h2 {
+    font-size: 2em;
+    line-height: 1.3em;
+}

@@ -1,0 +1,20 @@
+{
+  "name": "codex-build",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "css-loader": "^0.26.1",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "webpack": "^1.14.0"
+  },
+  "dependencies": {
+    "webpack": "^1.14.0"
+  },
+  "keywords": [],
+  "description": ""
+}
