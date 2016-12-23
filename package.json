@@ -9,7 +9,9 @@
   "license": "ISC",
   "devDependencies": {
     "css-loader": "^0.26.1",
+    "eslint-loader": "^1.6.1",
     "extract-text-webpack-plugin": "^1.0.1",
+    "stylelint-webpack-plugin": "^0.4.2",
     "webpack": "^1.14.0"
   },
   "dependencies": {
