@@ -1,8 +1,5 @@
-<!DOCTYPE html>
-<html>
 <head>
-    <title>Test page</title>
-    <link rel="stylesheet" type="text/css" href="public/build/bundle.css">
+    <link rel="stylesheet" href="public/build/bundle.css">
     <script src="public/build/bundle.js"></script>
 </head>
 <body>
@@ -10,15 +7,14 @@
         <a href="index.html">Main</a>
         <a href="article.html">Article</a>
 
-        <span class="button">Enter</span>
-
+        <span class="button">Войти</span>
     </header>
     <div class="content">
         Content
-        <div id='js-output'></div>
+        <div id="js-output"></div>
     </div>
-    <script type="text/javascript">
+    <script>
         testApp.index.draw();
+        testApp.article.print("CodeX");
     </script>
 </body>
-</html>

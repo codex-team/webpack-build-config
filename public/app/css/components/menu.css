@@ -14,7 +14,7 @@
 .button {
     display: inline-block;
     padding: 10px 20px;
-    border: 1px solid color(var(--buttonColor) lightness(+40%));
+    border: 1px solid color(var(--redColor) lightness(+40%));
     border-radius: 20px;
-    color: var(--buttonColor);
+    color: var(--redColor);
 }

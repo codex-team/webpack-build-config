@@ -1,12 +1,12 @@
 var article = (function () {
-    var print = function (text) {
+    var print = function ( text ) {
         var output = document.getElementById('js-output');
 
         output.textContent = text;
     };
 
     return {
-        print: print
+        'print': print
     };
 })();
 

@@ -1,11 +1,8 @@
 require('../css/main.css');
 
 var app = {
-
-    article: require('./article.js'),
-
-    index: require('./base.js')
-
+    index:   require('./index.js'),
+    article: require('./article.js')
 };
 
 module.exports = app;

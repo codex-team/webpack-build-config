@@ -2,49 +2,73 @@
  * Bundle config
  */
 
+ var webpack           = require('webpack');
  var ExtractTextPlugin = require("extract-text-webpack-plugin");
- var StyleLintPlugin = require("stylelint-webpack-plugin");
- var webpack = require("webpack");
+ var StyleLintPlugin   = require('stylelint-webpack-plugin');
+
 
 module.exports = {
+
     entry: './public/app/js/main.js',
+
     output: {
         filename: './public/build/bundle.js',
         library: 'testApp'
     },
+
     module: {
         loaders: [
-            { test: /\.css$/, loader: ExtractTextPlugin.extract("css-loader?importLoaders=1!postcss-loader") },
-            {test: /\.js$/, loader: "eslint-loader", exclude: /node_modules/}
+            {
+                test: /\.css$/,
+                loader: ExtractTextPlugin.extract("css-loader?uglify=1&importLoaders=1!postcss-loader")
+            },
+            {
+                test : /\.js$/,
+                loader: "eslint-loader"
+
+            }
         ]
     },
+
+    /**
+    * PostCSS configuration
+    */
     postcss: function () {
         return [
-            // require('autoprefixer'),
 
-            // Allow using CSSNext for included files
+            /** Позволяет использовать CSSnext во вложенных файлах*/
             require('postcss-smart-import'),
 
-            // Allow use new CSS features
-            require('postcss-cssnext')
+            /** Позволяет использовать новые возможности CSS: переменные, фукнции и тд*/
+            require('postcss-cssnext'),
+
         ];
     },
+
     plugins: [
+
+        /** Минифицируем CSS и JS */
         new webpack.optimize.UglifyJsPlugin(),
 
+        /** Block biuld if errors found */
         new webpack.NoErrorsPlugin(),
-        
-        // Move CSS and JS into separate file
+
+        /** Вырезает CSS из JS сборки в отдельный файл */
         new ExtractTextPlugin("public/build/bundle.css"),
 
-        // Check CSS syntax
+        /** Проврка синтаксиса CSS */
         new StyleLintPlugin({
             context : './public/app/css/',
             files : 'main.css'
-        })
+        }),
+
     ],
+
+    /** Пересборка при изменениях */
     watch: true,
     watchOptions: {
-        aggregateTimeout: 10
+
+        /** Таймаут перед пересборкой */
+        aggragateTimeout: 50
     }
 };
