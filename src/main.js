@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = function () {
-  require('./js/methods');
+  let methods = require('./js/methods');
 
-  return;
+  return methods;
 };
