@@ -29,7 +29,7 @@ var entry = './entry.js';
  */
 var output = {
   filename: pkg.main,
-  library: pkg.name,
+  library: pkg.exportModuleName,
   libraryTarget: 'umd',
 };
 

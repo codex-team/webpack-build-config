@@ -1,5 +1,6 @@
 {
-  "name": "codex-plugin",
+  "name": "codex.editor.plugin",
+  "exportModuleName": "pluginName",
   "version": "1.0.0",
   "keywords": [],
   "description": "",
