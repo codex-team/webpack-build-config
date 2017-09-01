@@ -89,7 +89,9 @@ var plugins = [
   }),
 
   /** Minify JS and CSS */
-  new webpack.optimize.UglifyJsPlugin(),
+  new webpack.optimize.UglifyJsPlugin({
+    sourceMap: true
+  }),
 
   /** Block biuld if errors found */
   new webpack.NoEmitOnErrorsPlugin(),
